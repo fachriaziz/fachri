@@ -25,8 +25,8 @@ export function Hero({
   ],
 }: Partial<HeroSectionProps> = {}) {
   return (
-    <section className="relative flex flex-col justify-center pt-32 pb-20 md:pt-48 md:pb-32 max-w-5xl mx-auto px-6">
-      <div className="p-8 md:p-12 space-y-8 text-center">
+    <section className="relative flex flex-col justify-center min-h-[85dvh] md:min-h-[80dvh] pt-28 pb-20 md:pt-48 md:pb-32 max-w-5xl mx-auto px-6">
+      <div className="space-y-8 text-center">
         <div className="space-y-4">
           <H1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
             {title}
@@ -41,14 +41,14 @@ export function Hero({
           {description}
         </P>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full">
           {ctaButtons.map((button, index) => (
-            <Link key={index} href={button.href}>
+            <Link key={index} href={button.href} className="w-full sm:w-auto">
               <Button
                 variant={button.variant}
                 size="lg"
                 className={cn(
-                  "rounded-full px-8 text-base transition-all hover:scale-105 active:scale-95",
+                  "w-full sm:w-auto rounded-full px-8 text-base transition-all hover:scale-105 active:scale-95",
                   button.variant === "default" &&
                     "gap-2 bg-foreground text-background hover:bg-foreground/90 border-none",
                   button.variant === "outline" &&
