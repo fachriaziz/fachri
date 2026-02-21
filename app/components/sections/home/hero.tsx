@@ -25,10 +25,10 @@ export function Hero({
   ],
 }: Partial<HeroSectionProps> = {}) {
   return (
-    <section className="relative flex flex-col justify-center min-h-[85dvh] md:min-h-[80dvh] pt-28 pb-20 md:pt-48 md:pb-32 max-w-5xl mx-auto px-6">
-      <div className="space-y-8 text-center">
+    <section className="relative flex flex-col justify-center min-h-[100dvh] md:min-h-[90dvh] pt-16 flex-grow max-w-5xl mx-auto px-6">
+      <div className="space-y-8 text-center mt-[-8dvh] md:mt-0">
         <div className="space-y-4">
-          <H1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
+          <H1 className="text-[15vw] leading-[1.1] sm:text-7xl md:text-8xl font-black tracking-tighter">
             {title}
             <span className="text-muted-foreground">.</span>
           </H1>
@@ -48,7 +48,7 @@ export function Hero({
                 variant={button.variant}
                 size="lg"
                 className={cn(
-                  "w-full sm:w-auto rounded-full px-8 text-base transition-all hover:scale-105 active:scale-95",
+                  "w-full sm:w-auto rounded-full px-6 py-6 sm:px-8 text-sm sm:text-base font-semibold transition-all hover:scale-105 active:scale-95",
                   button.variant === "default" &&
                     "gap-2 bg-foreground text-background hover:bg-foreground/90 border-none",
                   button.variant === "outline" &&

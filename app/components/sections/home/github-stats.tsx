@@ -100,8 +100,8 @@ export async function GithubStats() {
                 </div>
 
                 {/* Right: Stats + Button */}
-                <div className="flex items-center gap-6 w-full md:w-auto">
-                  <div className="flex items-center gap-6 flex-1 md:flex-initial">
+                <div className="flex flex-wrap sm:flex-nowrap items-center justify-between sm:justify-end gap-6 w-full md:w-auto mt-2 md:mt-0">
+                  <div className="flex items-center gap-6">
                     <div className="flex flex-col items-center min-w-[60px]">
                       <span className="text-2xl font-bold font-mono text-foreground">
                         {user.public_repos}
@@ -125,7 +125,7 @@ export async function GithubStats() {
                     href={user.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={cn(buttonVariants({ size: "sm" }), "shrink-0")}
+                    className={cn(buttonVariants({ size: "sm" }), "w-full sm:w-auto shrink-0")}
                   >
                     <Github size={16} className="mr-2" />
                     Visit GitHub
