@@ -5,6 +5,7 @@ import { ThemeProvider } from "./components/providers/theme-provider";
 import { NavbarWrapper } from "./components/layout/navbar-wrapper";
 import { Footer } from "./components/layout/footer";
 import { WebVitals } from "./components/seo/web-vitals";
+import { Analytics } from "@vercel/analytics/next";
 
 const googleSansFlex = Google_Sans_Flex({
   subsets: ["latin"],
@@ -123,6 +124,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
